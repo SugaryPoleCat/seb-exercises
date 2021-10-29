@@ -462,6 +462,7 @@ namespace CSharp_Basics
             subc.makeUser();
             subc.displayUser();
 
+            Console.WriteLine("EOF. End of file");
             Console.ReadLine();
             #endregion
         }
