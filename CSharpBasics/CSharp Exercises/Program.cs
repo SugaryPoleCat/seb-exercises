@@ -7,12 +7,13 @@ namespace CSharp_Basics
         static void Main(string[] args)
         {
             #region basics
+            Console.WriteLine("THE BASICS");
             // Variables.
             string characterName = "";
             int characterAge;
             characterAge = 35;
 
-            // concat the string
+            // concat the string, aka put it together.
             Console.WriteLine("There once was a man named " + characterName);
             Console.WriteLine("He was " + characterAge + " years old");
 
@@ -20,18 +21,16 @@ namespace CSharp_Basics
             Console.WriteLine("He really liked the name " + characterName);
             Console.WriteLine("But didn't like being " + characterAge);
 
-            // HJow to read user input:
-            Console.Write("Input your name: ");
-            string myName = Console.ReadLine();
-            Console.WriteLine("Hello " + myName);
-
-
             // waits for iunput = pauses the console.
             Console.WriteLine("\npress enter key to continue to woring with strings\n");
-            Console.ReadLine();
+
+            // Reading user input:
+            Console.Write("Please input something for the test: ");
+            string userInput = Console.ReadLine();
             #endregion
 
             #region dataTypes
+            Console.WriteLine("DATA TYPES");
             //Data types
             // String has "" while char has '' and ONLY handles 1 character.;
             string phrase = "Boku no goku";
@@ -91,6 +90,7 @@ namespace CSharp_Basics
             #endregion
 
             #region working With String
+            Console.WriteLine("WORKING WITH STRINGS");
             string anotherPhrase = "This is fantastic";
             Console.WriteLine(anotherPhrase);
             // prints an empty line
@@ -116,6 +116,7 @@ namespace CSharp_Basics
             #endregion
 
             #region working wih numbers
+            Console.WriteLine("WORKING WITH NUMBERS");
             // you can totally like in JS perform math executions in console.
             int numberA = 10;
             int numberB = 5;
@@ -184,11 +185,15 @@ namespace CSharp_Basics
             string userAge = Console.ReadLine();
             Console.WriteLine("Hello " + userName + " you are " + userAge);
 
+            // YOu also have comparisons:
+            // a < b , a > b, a == b, a <= b, a >= b
+
             Console.WriteLine("\npress enter key to continue to wroking with arrays\n");
             Console.ReadLine();
             #endregion
 
             #region working with arrays
+            Console.WriteLine("WORKING WITH ARRAYS");
             int[] luckyNumbers = { 1, 2, 3, 5, 8, 13, 27 };
 
             // prints the number at index [];
@@ -207,13 +212,13 @@ namespace CSharp_Basics
             friends[2] = "Pooper";
             friends[3] = "Peter";
             friends[4] = "jorge";
-            friends[5] = "aAsd";
 
             Console.WriteLine("\npress enter key to continue to wroking with if statements\n");
             Console.ReadLine();
             #endregion
 
             #region if statements
+            Console.WriteLine("WORKING WITH IF");
             bool isMale = true;
             bool isTall = false;
 
@@ -281,6 +286,7 @@ namespace CSharp_Basics
             #endregion
 
             #region switch statement
+            Console.WriteLine("WORKING WITH SWITCH");
             // faster than If/else, if the if/else is a huge block of code.
             // otherwise the speedness is unnoticeable.
 
@@ -299,7 +305,163 @@ namespace CSharp_Basics
                     break;
             }
 
-            Console.WriteLine("\npress enter key to continue to wroking with arrays\n");
+            Console.WriteLine("\npress enter key to continue to wroking with while looops\n");
+            Console.ReadLine();
+            #endregion
+
+            #region while loop
+            Console.WriteLine("WORKING WITH WHILE");
+            int whileLoopTries = 0;
+            int whileLoopLimit = 10;
+            bool whileLoopBool = false;
+
+            // dfo this while conditions match.
+            while (whileLoopTries <= whileLoopLimit && !whileLoopBool)
+            {
+                Console.WriteLine(whileLoopTries);
+                whileLoopTries++;
+                if (whileLoopTries <= whileLoopLimit)
+                {
+                    whileLoopBool = true;
+                }
+            }
+            if (whileLoopBool)
+            {
+                Console.WriteLine("you win!");
+            }
+
+            // Perform first THEN perform check
+            do
+            {
+                Console.WriteLine(whileLoopTries);
+                whileLoopTries++;
+                if (whileLoopTries <= whileLoopLimit)
+                {
+                    whileLoopBool = true;
+                }
+            } while (whileLoopTries <= whileLoopLimit && !whileLoopBool);
+
+            if (whileLoopBool)
+            {
+                Console.WriteLine("you win!");
+            }
+            whileLoopTries = 0;
+            whileLoopLimit = 10;
+            whileLoopBool = false;
+
+            Console.WriteLine("\npress enter key to continue to wroking with for loops\n");
+            Console.ReadLine();
+            #endregion
+
+            #region for loop
+            Console.WriteLine("WORKING WITH FOR");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            int[] trash = { 50, 20, 30, 40, 60, 80 };
+            // the THING in ARRAY, has to match what the array IS.
+            // so you cant have foreach(string shit in trash);
+            foreach (int t in trash)
+            {
+                Console.WriteLine(t);
+            }
+            Console.WriteLine("\npress enter key to continue to wroking with 2d arrays\n");
+            Console.ReadLine();
+            #endregion
+
+            #region 2darray
+            Console.WriteLine("WORKING WITH 2D ARRRAY");
+            // they all have to be arrays
+            int[,] numberGrid =
+            {
+                { 8, 4},
+                { 3, 5 },
+                { 1, 6 }
+            };
+
+            // [WHICH array, WHICH item in array]
+            Console.WriteLine(numberGrid[0, 1]);
+
+            // just like in arays, you can do this:
+            int[,] unkownGrid = new int[2, 3];
+            // of course C# needs the amount of arrays and items in each array
+            // beforehand, to make this.
+
+            Console.WriteLine("\npress enter key to continue to wroking with exception hanlding\n");
+            Console.ReadLine();
+            #endregion
+
+            #region exception hanlding
+            Console.WriteLine("WORKING WITH EXCEPTION HANDLING");
+            // when program breaks, its an exception
+            try
+            {
+                Console.WriteLine("enter a number: ");
+                int exceptionNum1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("enter another number: ");
+                int exceptionNum2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine(exceptionNum1 / exceptionNum2);
+            }
+            // you can specify in catch, what types of Exception you want.
+            // for example: Exception, DivideByZeroException, etc.
+            // specify CORRECT exceptuion, otherwise it wont be CAUGHT.
+            // so if you specify, DivideByZero and then in your input, ype a letter, that wont be caught.
+            // YOU CAN specify multiple catches tho.
+            // IF you use Exception, its a super type, means it catches ALL the errors. 
+            // So if you are using multiple catches, put Exception at the BOTTOM of the catch chain.
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine(e);
+            }
+            catch (FormatException err)
+            {
+                Console.WriteLine(err);
+            }
+            catch (Exception err)
+            {
+                Console.WriteLine("Error message: " + err);
+            }
+            // gets executed wether something got caught or not.
+            // IS not always neeeded.....
+            finally
+            {
+                Console.WriteLine("This was mny trycatch");
+            }
+
+            Console.WriteLine("\npress enter key to continue to wroking with classes\n");
+            Console.ReadLine();
+            #endregion
+
+            #region classes and objects
+            Console.WriteLine("WORKING WITH CLASSES AND OBJECTS");
+            // this is how you initialise a class.
+            // This is also called an object.
+            NewClass nc = new NewClass("Jim");
+            Console.WriteLine("NC: " + nc);
+            Console.WriteLine("NC.Username: " + nc.Username);
+            Console.WriteLine("NC.getUsername(): " + nc.getUsername());
+            // Because .Username is a Get/Set method,
+            // you can do this to change the username of NC quickly.
+            nc.Username = "Tim";
+            // and this to get the name.
+            Console.WriteLine(nc.Username);
+
+            // this is a super classs
+            SuperClass sc = new SuperClass();
+            sc.UserName = "Mark";
+            sc.makeUser();
+            Console.WriteLine(sc.UserName);
+
+            // this is a subclass inheriting usage from super claass
+            SubClass subc = new SubClass();
+            subc.UserName = "Goerge";
+            subc.UserAge = 30;
+            subc.makeUser();
+            subc.displayUser();
+
             Console.ReadLine();
             #endregion
         }
