@@ -39,7 +39,6 @@ namespace Calculator
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            // Code goes below.
 
             // Code goes above.
             Console.ReadLine();
