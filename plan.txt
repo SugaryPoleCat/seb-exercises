@@ -15,7 +15,15 @@ operacja git w terminalu:
 	git commit -m ""
 	git commit -m -a ""
 	git push
-	git merge -f (force)
+	git merge -f (force, first do git fetch && git checkout [branch you are trying to merge to] then do git merge.)
 	git checkout
 	git branch
 	git checkout -b
+	git remote add [remote name locally] [link]
+	git remote -v (check remotes)
+	git remote set-url [remote name localyl] [link] (change link of the repo)
+	git remote set-url [remote name locally] --push --add [link] (must do: 
+		current repo link, then do this command again, for the other repo youre adding.)
+	git revert [commit hash]
+	git log (lists the commits and their hashes.)
+	git restore (if you lose files, ex: delte them on accident, run this.)
