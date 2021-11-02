@@ -1,0 +1,21 @@
+BASH
+najbardziej uzywane komendy
+	ls, cd, pwd, mkdir, touch, rm, rm -r, mv -r,
+	node
+	echo
+	expr (expression = matma)
+	var=$(expr)
+	echo $var
+	expr $var +/-/*// 2
+GIT
+operacja git w terminalu:
+	git fetch
+	git pull
+	git add .
+	git commit -m ""
+	git commit -m -a ""
+	git push
+	git merge -f (force)
+	git checkout
+	git branch
+	git checkout -b
