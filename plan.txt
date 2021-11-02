@@ -27,3 +27,4 @@ operacja git w terminalu:
 	git revert [commit hash]
 	git log (lists the commits and their hashes.)
 	git restore (if you lose files, ex: delte them on accident, run this.)
+	rm -f .git/index.lock ( if you have a problem with git having 2 processes at the same time on accident, this rescues you.)
